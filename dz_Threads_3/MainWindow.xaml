@@ -1,0 +1,102 @@
+﻿<Window x:Class="dz_Threads_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dz_Threads_3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Margin="10">
+            
+            <StackPanel Orientation="Vertical">
+                <Label Content="Задание 1."></Label>
+                <Label Content="Числа от 0 до 50."></Label>
+            </StackPanel>
+            
+            <ListBox x:Name="listBoxTask1" Margin="0,50,0,0"></ListBox>
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1" Margin="10">
+           
+            <StackPanel>
+                <Label Content="Задание 2."></Label>
+                <Label Content="Числа в диапазоне, выбранном пользователем."></Label>
+                <TextBox x:Name="txtBoxTask2_1" Margin="0,1"/>
+                <TextBox x:Name="txtBoxTask2_2" Margin="0,1"/>
+                <Button Content="Show" x:Name="btnTask2" Click="btnTask2_Click" Margin="0,1"></Button>
+            </StackPanel>
+
+            <ListBox x:Name="listBoxTask2" Margin="0,120,0,0"></ListBox>
+
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="7*"/>
+                   
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.ColumnSpan="3">
+                    <Label Content="Задание 3."></Label>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Label Content="Кол-во потоков, выбранное пользователем."></Label>
+                </Grid>
+              
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <TextBox x:Name="txtBoxTask3_threadsNumber" Margin="0,0,10,0"></TextBox>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Button x:Name="btnTask3" Content="Show" Margin="10,0" Click="btnTask3_Click"/>
+                </Grid>
+
+               
+                <Grid Grid.Row="2" Grid.ColumnSpan="3" >
+                    <StackPanel Orientation="Horizontal" x:Name="gridForTask3">
+                        <!--здесь будут динамически добавляемый листБоксы-->
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            
+            <!--<StackPanel>
+                <Label Content="Задание 3."></Label>
+                
+                
+            </StackPanel>
+            <StackPanel Margin="0,20,0,0" Orientation="Horizontal">
+                <Label Content="Кол-во потоков, выбранное пользователем."></Label>
+                <Label Content="Числа в диапазоне, выбранном пользователем."></Label>
+            </StackPanel>
+            <StackPanel Margin="0,50,0,0"  Orientation="Horizontal" Height="50">
+                <TextBox x:Name="txtBoxTask3_threadsNumber"></TextBox>
+
+                <TextBox x:Name="txtBoxTask3_1"></TextBox>
+                <TextBox x:Name="txtBoxTask3_2"></TextBox>
+            </StackPanel>-->
+
+        </Grid>
+
+    </Grid>
+</Window>
